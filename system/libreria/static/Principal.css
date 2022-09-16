@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+:root{
+    --green:hsl( 162 , 45% , 56% ) ;
+    --lead:hsl(162,2%,56%); 
+    --blue: hsl( 220 , 85% , 57% );
+    --bluefu: rgb(4, 26, 70);
+    --violet:hsl( 272 , 92% , 32% ) ;
+    --tex-white:hsl( 0 , 0% , 100% ) ;
+    --text-light-gray:hsl( 0 , 0% , 90% );
+    --body-bg-color:hsl( 200 , 54% , 12% ) ;
+    --glass-bg-color:hsla( 0 , 0% , 100% , 0.05 ) ;
+    --border-color: hsla( 0 , 0% , 100% , 0.25 ) ;
+    --blur:blur( 10px ) ;
+    --button-hover-color:hsla( 0, 0%, 0%, 0.3 ) ; 
+    
+}
+/*reset*/
+*{
+   margin: 0;
+   padding: 0;
+   font-family: inherit;
+}
+
+/*Header*/
+header{
+    height: 100px;
+    padding: 0 50px;
+    color:#fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/*logo*/
+.logo{
+    text-transform: uppercase;
+    color: #82E0AA;
+    font-weight: 200;
+}
+
+.menu a{
+    color:#82E0AA ;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.mostrar-menu{
+    order: 1;
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color:#fff;
+}
+
+#check{
+    display: none;
+}
+
+/*Responsive*/
+@media(max-width:768px){
+    /*Header*/
+    .mostrar-menu,
+    .esconder-menu{
+        display:block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to right, var(--bluefu), var(--green));
+        right:-100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+     
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    #check:checked ~ .menu{
+        right: 0;
+    }
+}
+
+
+
+body{
+    background-color:#19547b;
+    color: var(--text-light-gray);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+body::after,
+body::before{
+    content:"";
+    position: fixed;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(150px);
+    opacity: 0.5;
+}
+
+body::before{
+    background-color:var(--green);
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%);
+}
+body::after{
+    background-color: var(--green);
+    right: 0;
+    top: 0;
+    transform: translate(50%);
+}
+
+
+
+/*contenido principal.htmal*/
+
+.color-acento{
+    color:#82E0AA ;
+}
+h1{
+    font-size: 3.5em;
+}
+h2{
+    font-size: 2.7em;
+}
+h3{
+    font-size: 2em;
+}
+p{  font-size: 1.25em;}
+ul{list-style: none;}
+
+button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color:#82E0AA; 
+}
+
+button:hover{
+    background-color: #3d7957 ;
+    
+}
+
+/* #hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: 
+    linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/images/Nasa.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+} */
+
+#Conoce-mas .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#contenidorelevante{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+}
+
+#contenidorelevante .container{
+    padding: 150px 12px;
+}
+
+#contenidorelevante h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#contenidorelevante p{
+    display: none;
+}
+
+#contenidorelevante .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/libreria/templates/imagen/Exoplanetas.jpg");
+
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/libreria/templates/imagen/Noticias.jpg");
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/libreria/templates/imagen/Tecnologia.jpg");
+
+}
+
+#caracteristicas .container{
+    text-align: center;
+    padding: 250px 12px;
+}
+
+#caracteristicas li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+#final{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30,30,30);
+    color: white;
+    height: 80vh;
+}
+
+#final h2{
+    font-size: 9vw;
+}
+
+#final button{
+    font-size: 5vw;
+}
+
+footer{
+    background-color: rgb(230,230,230);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100,100,100);
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExoNews</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'Principal.css' %}">
+    <link rel="icon" href="{% static 'imagen/iconopes1-removebg-preview.ico' %}">
+
+
+</head>
+
+<body>
+
+    <header>
+        <p class="logo">ExoNews</p>
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu">
+            &#8801
+        </label>
+
+        <nav class="menu">
+            <a href="inicio">Inicio</a>
+            <a href="#">Conoce mas</a>
+            <a href="login">Iniciar Sesion</a>
+            <label for="check" class="esconder-menu">
+                &#215
+            </label>
+        </nav>
+    </header>
+        
+   <section id="Banner">
+      <div class="conetenido-banner">
+           <h1><span>ExoNews</span><br>Evoluciona con ExoNews</h1>
+      </div>
+      
+   </section>
+
+    <section id="Conoce-mas">
+   
+       <div class="container">
+          <div class="img-container"></div>
+          <h2>Somos <spam class="color-acento">ExoNews</spam></h2>
+
+           <p>En la actualidad, la sociedad de la información y de la comunicación juega un papel muy importante en el
+             desarrollo de la sociedad. Diariamente la información digital, es manejada por millones de personas sin importar
+              su rango de edad, raza o religión. esta pagina tiene como objetivo acceder y compartir información acerca de 
+              noticias y novedades referente a política, economía, astrología, tecnologías y actualidades del mundo, recopila 
+              información de diversas fuentes a tu alcance.
+            </p>
+        </div>
+    </section>
+
+    <section id="contenidorelevante">
+    
+        <div class="container">
+        
+          <h2>Contenido relevante</h2>
+            <div class="contenidorel">
+                <div class="carta">
+                    <h3>Exoplanetas</h3>
+                    <p>Hace apenas unas décadas estudiar mundos fuera de nuestro propio sistema solar era inviable.
+                       En la actualidad, con el desarrollo de sofisticadas técnicas de detección y la información 
+                       de telescopios y satelites en orbita, se han detectado miles de planetas extrasolares. 
+                       Hoy nos interesa saber cosas como qué tan parecidos son a la Tierra, 
+                       si pueden albergar vida o no, si tienen lunas o cómo se relacionan con las estrellas que los hospedan. 
+                       Los exoplanetas son una de las areas más prometedoras de la astronomía, pero también de las más saturadas de información.
+      
+                      Este sitio es un intento por ayudarte a administrar esa información y estar actualizado sobre las noticias de este área, así como de divulgar y seguir algunas estadísticas y conceptos básicos sobre el tema</p>
+                    <button>conoce +</button>
+               </div>
+      
+                <div class="carta">
+                    <h3>Noticias</h3>
+                    <p>Programa de radio o televisión en el que se comunican hechos o sucesos recientes que han sucedido en todo el mundo y que tienen un interés público.</p>
+                    <button>conoce +</button>
+                </div>
+      
+                <div class="carta">
+                    <h3>Tecnologia</h3>
+                    <p>Programa de radio o televisión en el que se comunican hechos o sucesos recientes que han sucedido en todo el mundo y que tienen un interés público.</p>
+                    <button>Conoce +</button>
+                </div>
+
+            </div>
+          
+       </div>
+    </section>
+    
+    <section id="caracteristicas">
+        <div class="container">
+            <ul>
+                <li>✔️ 100% online</li>
+                <li>✔️ Flexibilidad de horarios</li>
+                <li>✔️ Soporte 1:1</li>
+                <li>✔️ Asistencia financiera</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="final">
+        <h2>Empezemos a explorar</h2>
+        <button>Explorar</button>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; ExoNews 2022</p>
+        </div>
+    </footer>
+</body>
+</html>
