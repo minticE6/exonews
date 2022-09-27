@@ -4,109 +4,300 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExoNews</title>
     {% load static %}
+    <!--Estilos-->
     <link rel="stylesheet" type="text/css" href="{% static 'Principal.css' %}">
-    <link rel="icon" href="{% static 'imagen/iconopes1-removebg-preview.ico' %}">
-
+    <!--iconpestaña-->
+    <link rel="icon" href="{% static 'imagen/icono.ico' %}">
+    <!--animaciones-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>ExoNews</title>
+   
 
 </head>
 
+
 <body>
+     
+    <!-----------Seccion barra vertical----------->
 
-    <header>
-        <p class="logo">ExoNews</p>
-        <input type="checkbox" id="check">
-        <label for="check" class="mostrar-menu">
-            &#8801
-        </label>
-
-        <nav class="menu">
-            <a href="login">Iniciar Sesion</a>
-            <label for="check" class="esconder-menu">
-                &#215
-            </label>
-        </nav>
-    </header>
-        
-   <section id="Banner">
-      <div class="conetenido-banner">
-           <h1><span>ExoNews</span><br>Evoluciona con ExoNews</h1>
-      </div>
-      
-   </section>
-
-    <section id="Conoce-mas">
-   
-       <div class="container">
-          <div class="img-container"></div>
-          <h2>Somos <spam class="color-acento">ExoNews</spam></h2>
-
-           <p>En la actualidad, la sociedad de la información y de la comunicación juega un papel muy importante en el
-             desarrollo de la sociedad. Diariamente la información digital, es manejada por millones de personas sin importar
-              su rango de edad, raza o religión. esta pagina tiene como objetivo acceder y compartir información acerca de 
-              noticias y novedades referente a política, economía, astrología, tecnologías y actualidades del mundo, recopila 
-              información de diversas fuentes a tu alcance.
-            </p>
-        </div>
+    <div class= "sidebar close">
+       <div class="logo-details">
+          <img src= "{% static 'imagen/icono.ico' %}" alt="">
+          <span class="logo_name">ExoNews</span>
+       </div>
+ 
+       <ul class=" nav-links ">
+          <li>
+             <a href="#">
+                <i class='bx bx-grid-alt' ></i>
+                <span class="link_name">ExoNews</span>
+             </a>
+ 
+             <ul class="sub-menu blank">
+                <li><a class="link_name" href="#wrp">ExoNews</a></li>
+             </ul>
+          </li>
+ 
+          <li>
+             <a href="#sectionnoti">
+                <i class='bx bx-news'></i>
+                <span class="link_name">Noticias</span>
+             </a>
+ 
+             <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Noticias</a></li>
+             </ul>
+ 
+          </li>
+ 
+          <li>
+             <div class="iocn-link">
+                <a href="#">
+                   <i class='bx bx-collection' ></i>
+                   <span class="link_name">Categorias</span>
+                </a>
+ 
+                <i class='bx bxs-chevron-down arrow' ></i>
+             </div>
+ 
+             <ul class="sub-menu">
+ 
+                <li><a class="link_name" href="#">Categorias</a></li>
+                <li><a href="#">Internacional</a></li>
+                <li><a href="#">ciencia y tecnología</a></li>
+                <li><a href="#">Entretenimiento</a></li>
+                <li><a href="#">Deportes</a></li>
+ 
+             </ul>
+          </li>
+ 
+          <li>
+             <div class="iocn-link">
+                <a href="#sectionexo">
+                   <i class='bx bx-planet'></i>
+                   <span class="link_name">Exoplanetas</span>
+                </a>
+ 
+                <i class='bx bxs-chevron-down arrow' ></i>
+             </div>
+ 
+             <ul class="sub-menu">
+                <li><a class="link_name" href="#">Exoplanetas</a></li>
+                <li><a href="#">Tabla y estadisticas</a></li>
+                <li><a href="#">Informacion</a></li>
+                <li><a href="#">Datos</a></li>
+             </ul>
+          </li>
+ 
+          <li>
+             <a href="#">
+                <i class='bx bx-planet'></i>
+                <span class="link_name">Exoplanetas</span>
+             </a>
+ 
+             <ul class="sub-menu blank">
+                 <li><a class="link_name" href="#">Exoplanetas</a></li>
+             </ul>
+ 
+          </li>
+ 
+          <li>
+             <a href="#">
+                <i class='bx bx-bookmark'></i>
+                <span class="link_name">Para ti</span>
+             </a>
+ 
+             <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Para ti</a></li>
+             </ul>
+ 
+          </li>
+ 
+          <li>
+             <div class="iocn-link">
+                <a href="#">
+                   <i class='bx bx-plug' ></i>
+                   <span class="link_name">Idioma</span>
+                </a>
+ 
+                <i class='bx bxs-chevron-down arrow' ></i>
+             </div>
+ 
+             <ul class="sub-menu">
+               <li><a class="link_name" href="#">Idioma</a></li>
+                <li><a href="#">Español</a></li>
+                <li><a href="#">Ingles</a></li>
+                <li><a href="#">Box Icons</a></li>
+             </ul>
+          </li>
+ 
+          <li>
+             <a href="#">
+                <i class='bx bx-bell'></i>
+                <span class="link_name">Notificaciones</span>
+             </a>
+ 
+             <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Notificaciones</a></li>
+             </ul>
+          </li>
+ 
+          <li>
+             <a href="#">
+                <i class='bx bx-history'></i>
+                <span class="link_name">History</span>
+             </a>
+ 
+             <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">History</a></li>
+             </ul>
+ 
+          </li>
+ 
+          <li>
+             <div class="profile-details">
+                <div class="profile-content">
+                   <img src= "{% static 'imagen/Username.png' %}" alt="profileImg">
+                </div>
+ 
+                <div class="name-job">
+                   <div class="profile_name">UserName</div>
+                   <div class="job">ExoNews</div>
+                </div>
+ 
+                <a href="index.html">
+                   <i class='bx bx-log-out' ></i>
+                </a>
+ 
+             </div>
+ 
+          </li>
+       </ul>
+   </div>
+ 
+   <!----------seccion barra horizontal------------>
+    <section class="home-section">
+       <div class="home-content">
+          <i class='bx bx-menu' ></i>
+          <span class="text">ExoNews</span>  
+        </div> 
     </section>
 
-    <section id="contenidorelevante">
-    
-        <div class="container">
-        
-          <h2>Contenido relevante</h2>
-            <div class="contenidorel">
-                <div class="carta">
-                    <h3>Exoplanetas</h3>
-                    <p>Hace apenas unas décadas estudiar mundos fuera de nuestro propio sistema solar era inviable.
-                       En la actualidad, con el desarrollo de sofisticadas técnicas de detección y la información 
-                       de telescopios y satelites en orbita, se han detectado miles de planetas extrasolares. 
-                       Hoy nos interesa saber cosas como qué tan parecidos son a la Tierra, 
-                       si pueden albergar vida o no, si tienen lunas o cómo se relacionan con las estrellas que los hospedan. 
-                       Los exoplanetas son una de las areas más prometedoras de la astronomía, pero también de las más saturadas de información.
-      
-                      Este sitio es un intento por ayudarte a administrar esa información y estar actualizado sobre las noticias de este área, así como de divulgar y seguir algunas estadísticas y conceptos básicos sobre el tema</p>
-                    <button>conoce +</button>
-               </div>
-      
-                <div class="carta">
-                    <h3>Noticias</h3>
-                    <p>Programa de radio o televisión en el que se comunican hechos o sucesos recientes que han sucedido en todo el mundo y que tienen un interés público.</p>
-                    <button>conoce +</button>
-                </div>
-      
-                <div class="carta">
-                    <h3>Tecnologia</h3>
-                    <p>Programa de radio o televisión en el que se comunican hechos o sucesos recientes que han sucedido en todo el mundo y que tienen un interés público.</p>
-                    <button>Conoce +</button>
-                </div>
-
-            </div>
+   <!--------------seccion principal---------------->
+    <section id="principal">
+       <div class="wrp">
+          <div class="portada"></div>
+          <div class="contenido">
+             <div class="animate__animated animate__fadeInDown info">
+                <h1 id="color">Bienvenidos ExoNews</h1>
+                <h1>Evoluciona en el universo de la información</h1>
+             </div>
+          </div>
+          <div class="curveado">
+             <img src="{% static 'imagen/wave.svg' %}" alt="">
+          </div>
+       </div>
+       
+    </section>
+ 
+    <!----------Seccion noticias---------->
+    <section id="sectionnoti">
+ 
+       <div class="seccionnoti">
+          <div class="textnoti">
+             <h1>Noticias</h1>
+          </div>
+ 
+          <div class="cuadrado">
+             <div class="contcuadro">
+                <h4 >Internacional</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore vero voluptatem autem soluta dicta hic.<a href="">Ver mas</a></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore vero voluptatem autem soluta dicta hic.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore vero voluptatem autem soluta dicta hic.</p>
+             </div>
+          </div>
+         
           
+          <div class="card">
+             <div class="header">
+                <h4 class="title">Seccion noticias</h4>
+                <div class="img-box">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:#1d8122;"><path d="M20 17a1 1 0 0 1-2 0V5a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v13a2 2 0 0 0 2 2h15c1.654 0 3-1.346 3-3V7h-2v10zM12 7h3v2h-3V7zm0 4h3v2h-3v-2zM5 7h5v6H5V7zm0 10v-2h10v2H5z"></path></svg>
+                </div>
+ 
+                <h1 class="title">Semana</h1>
+             </div>
+         
+             <div class="content">
+                <p>
+                 Lorem ipsum dolor sit amet, consectetur
+                 adipiscing it amet it...
+                </p>
+         
+                <a class="btn-link">Read More...</a>
+             </div>
+         </div>
+ 
+         <div class="rectangulo">
+            <div class="contenidorecta">
+               <h4>Fuentes</h4>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore vero voluptatem autem soluta dicta hic. <a href="">Ver mas</a></p>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore vero voluptatem autem soluta dicta hic. <a href="">Ver mas</a></p>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore vero voluptatem autem soluta dicta hic. <a href="">Ver mas</a></p>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore vero voluptatem autem soluta dicta hic. <a href="">Ver mas</a></p>
+            </div>
+          </div>
        </div>
     </section>
-    <!-- se elimina seccion de caracteristicas --
-    <section id="caracteristicas">
-        <div class="container">
-            <ul>
-                <li>✔️ 100% online</li>
-                <li>✔️ Flexibilidad de horarios</li>
-                <li>✔️ Soporte 1:1</li>
-                <li>✔️ Asistencia financiera</li>
-            </ul>
-        </div>
-    </section>
-    se elimina seccion de caracteristicas -->
-    <section id="final">
-        <h2>Empezemos a explorar</h2> <!-- se cambio de H2 a H3 -->
-        <!-- se elimina el siguiente boton <button>Explorar</button> -->
-    </section>
 
+
+    <!--------------Seccion exoplanetas--------->
+    <section id="sectionexo">
+ 
+       <div class="textexo">
+          <h1>Exoplanetas</h1>
+       </div>
+       
+       <table>
+          <thead>
+             <tr>
+                <th>descrip</th><th>descrip</th><th>descrip</th><th>descrip</th>
+             </tr>                    
+          </thead>
+         
+          <tr>
+              <th>colocar</th><th>colocar</th><th>colocar</th><th>colocar</th>
+          </tr>  
+ 
+          <tr>
+              <th>colocar</th><th>colocar</th><th>colocar</th><th>colocar</th>
+          </tr>  
+ 
+          <tr>
+              <th>colocar</th><th>colocar</th><th>colocar</th><th>colocar</th>
+          </tr>  
+ 
+       </table>
+ 
+    </section>
+   
+    <!-----------Seccion final o footer------->
     <footer>
-        <div class="container">
-            <p>&copy; ExoNews 2022</p>
-        </div>
-    </footer>
+       <div class="container">
+          <p>&copy; ExoNews 2022</p>
+       </div>
+   </footer>
+
+
+   <!------------javascript----------------> 
+   <script src="{% static 'barra.js' %}"></script>
+   <script src="{% static 'scroll.js' %}"></script>
+   
+ 
 </body>
 </html>
+ 
