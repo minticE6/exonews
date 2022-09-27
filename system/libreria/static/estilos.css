@@ -162,7 +162,7 @@ a{
   outline: none;
   padding: .2rem 1rem;
   border-radius: 1rem;
-  border-color: rgba(30, 30, 30, 30);
+  border-color: #7a9cc6;
 }
 
 .form-content ::placeholder{
@@ -173,6 +173,7 @@ a{
    opacity: 0;
    transition: opacity .3s;
 }
+
 .form-content .input-link{
     margin-top: 10px;
     text-align: right;
