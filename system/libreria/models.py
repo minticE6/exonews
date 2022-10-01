@@ -1,6 +1,5 @@
 from django.db import models
-
-# Create your models here.
+ 
 class explanetas (models.Model): # para datos curiosos de exoplanetas extraidos desde wikipedia
     id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100, verbose_name='Nombre' )
