@@ -5,8 +5,8 @@ class explanetas (models.Model): # para datos curiosos de exoplanetas extraidos 
     id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100, verbose_name='Nombre' )
     descubrimiento = models.CharField(max_length=100, verbose_name='Descubrimiento' )
-    masa = models.CharField(max_length=100, verbose_name='Masa')
-    radio = models.CharField(max_length=100, verbose_name='Radio')
+    temperatura = models.CharField(max_length=100, verbose_name='Temperatura')
+    tipo = models.CharField(max_length=100, verbose_name='Tipo')
     def __self__(self):
         fila = "Nombre" + self.nombre + '-' + "Descubrimiento" + self.descubrimiento
         return fila
