@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from .models import explanetas
 
 def Inicio(request):
-    return render(request, 'paginas/inicio.html')
+    Explanetas = explanetas.objects.all()
+    return render(request, 'paginas/inicio.html', {'Explanetas': Explanetas})
 def Login (request):
     return render(request, 'paginas/login.html')
 def Recuperarpass(request):

@@ -4,10 +4,10 @@ class explanetas (models.Model): # para datos curiosos de exoplanetas extraidos 
     id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100, verbose_name='Nombre' )
     descubrimiento = models.CharField(max_length=100, verbose_name='Descubrimiento' )
-    masa = models.CharField(max_length=100, verbose_name='Masa')
-    radio = models.CharField(max_length=100, verbose_name='Radio')
+    temperatura = models.CharField(max_length=100, verbose_name='Temperatura')
+    tipo = models.CharField(max_length=100, verbose_name='Tipo')
     def __self__(self):
-        fila = "Nombre" + self.nombre + '-' + "Descubrimiento" + self.descubrimiento
+        fila = "Nombre_" + self.nombre + '-' + "Descubrimiento" + self.descubrimiento
         return fila
     
 class userandpassword(models.Model): #conexion de datos entre el HTML y el backend y la base de datos
@@ -17,7 +17,7 @@ class userandpassword(models.Model): #conexion de datos entre el HTML y el backe
     correo = models.CharField(max_length=100, verbose_name='Correo')
     apodo = models.CharField(max_length=100, verbose_name='Apodo')
     def __self__(self):
-        fila = "Nombre" + self.nombre + "_" + "Apellido" + self.apellido + "-" + "Apodo" + self.apodo
+        fila = "Nombre_" + self.nombre + "_" + "Apellido" + self.apellido + "-" + "Apodo" + self.apodo
         return fila
     
     
