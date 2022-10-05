@@ -1,9 +1,9 @@
-,Nombre,Tipo,Descubrimiento,Constelación
-7,2M0437 b,Joviano,2021,-
-122,G 9-40 b,Supertierra,2019,-
-1734,Kepler-440b,Supertierra,2015,Lyr
-113,EPIC 203771098 c,Neptuniano,2015,Sco
-1740,Kepler-444d,Subterrestre,2015,Lyr
-1739,Kepler-444c,Subterrestre,2015,Lyr
-1738,Kepler-444b,Subterrestre,2015,Lyr
-1737,Kepler-443b,Supertierra,2015,Cyg
+,Nombre,Tipo,Distancia,Descubrimiento,Constelación
+7,2M0437 b,Joviano,417.8 al,2021,-
+122,G 9-40 b,Supertierra,"91,1 al",2019,-
+1734,Kepler-440b,Supertierra,"851,28 al",2015,Lyr
+113,EPIC 203771098 c,Neptuniano,"590,35 al",2015,Sco
+1740,Kepler-444d,Subterrestre,0 al,2015,Lyr
+1739,Kepler-444c,Subterrestre,0 al,2015,Lyr
+1738,Kepler-444b,Subterrestre,0 al,2015,Lyr
+1737,Kepler-443b,Supertierra,"2540,79 al",2015,Cyg
