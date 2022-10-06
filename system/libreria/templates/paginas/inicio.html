@@ -259,28 +259,28 @@
     <section id="sectionexo">
  
        <div class="textexo">
-          <h1>Exoplanetas</h1>
+          <h1>Exoplanetas descubrimiento</h1>
        </div>
        
        <table>
           <thead>
              <tr>
-                <th>descrip</th><th>descrip</th><th>descrip</th><th>descrip</th>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Distancia</th>
+                <th>Descubrimiento</th>
+                <th>Constelacion</th>
              </tr>                    
           </thead>
-         
+         {% for exoplaneta in Explanetas %}
           <tr>
-              <th>colocar</th><th>colocar</th><th>colocar</th><th>colocar</th>
+              <th>{{exoplaneta.nombre}}</th>
+              <th>{{exoplaneta.tipo}}</th>
+              <th>{{exoplaneta.distancia}}</th>
+              <th>{{exoplaneta.descubrimiento}}</th>
+              <th>{{exoplaneta.constelacion}}</th>
           </tr>  
- 
-          <tr>
-              <th>colocar</th><th>colocar</th><th>colocar</th><th>colocar</th>
-          </tr>  
- 
-          <tr>
-              <th>colocar</th><th>colocar</th><th>colocar</th><th>colocar</th>
-          </tr>  
- 
+          {% endfor %} 
        </table>
  
     </section>

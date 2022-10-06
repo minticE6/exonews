@@ -8,7 +8,7 @@ class explanetas (models.Model): # para datos curiosos de exoplanetas extraidos 
     descubrimiento = models.CharField(max_length=100, verbose_name='Descubrimiento' )
     constelacion = models.CharField(max_length=100, verbose_name='Constelación')
     def __self__(self):
-        fila = "Nombre_" + self.nombre + '-' + "Descubrimiento" + self.descubrimiento
+        fila = "Nombre" + self.nombre + " _ " + "Tipo" + self.tipo + " - " + "Distancia" + self.distancia + " - " + "Descubrimiento" + self.descubrimiento + " - " + "Constelación" + self.constelacion
         return fila
     
 class userandpassword(models.Model): #conexion de datos entre el HTML y el backend y la base de datos
@@ -18,7 +18,7 @@ class userandpassword(models.Model): #conexion de datos entre el HTML y el backe
     correo = models.CharField(max_length=100, verbose_name='Correo')
     apodo = models.CharField(max_length=100, verbose_name='Apodo')
     def __self__(self):
-        fila = "Nombre_" + self.nombre + "_" + "Apellido" + self.apellido + "-" + "Apodo" + self.apodo
+        fila = "Nombre" + self.nombre + " _ " + "Apellido" + self.apellido + " - " + "Correo" + self.correo + " - " + "Apodo" + self.apodo
         return fila
     
     
