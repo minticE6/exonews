@@ -17,8 +17,9 @@ class userandpassword(models.Model): #conexion de datos entre el HTML y el backe
     apellido = models.CharField(max_length=100, verbose_name='Apellido')
     correo = models.CharField(max_length=100, verbose_name='Correo')
     apodo = models.CharField(max_length=100, verbose_name='Apodo')
+    contrasena = models.CharField(max_length=100, verbose_name='Contrasena')
     def __self__(self):
-        fila = "Nombre" + self.nombre + " _ " + "Apellido" + self.apellido + " - " + "Correo" + self.correo + " - " + "Apodo" + self.apodo
+        fila = "Id" + self.id + " - " + "Nombre" + self.nombre + " _ " + "Apellido" + self.apellido + " - " + "Correo" + self.correo + " - " + "Apodo" + self.apodo
         return fila
     
     

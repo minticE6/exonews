@@ -16,31 +16,29 @@
             <div class="circle-2"></div>
             <div class="circle-3"></div>
             <div class="box">
-                <h3>Crear una cuenta</h3>
+                <h3>Editar o Eliminar cuenta {{ userid2.id }}</h3>
                 
                 <form enctype="multipart/form-data" method="post">
                     {% csrf_token %}
-                    {% for campo in formulario %}
+                    {% for campo in userid2 %}
                     <div class="input-box">
-                        <label for="" class="form-label"></label>
+                        <label for="" class="form-label">{{ campo.label }}: </label>
                         <input
-                        type="{{ campo.field.widget.input_type }}"
+                        type="{{ campo.field.widget.input_type | default:'' }}"
                         class="input-control"
-                        name="{{ campo.name }}"
+                        name="{{ campo.name | default:'' }}"
                         id=""
                         aria-describedby="delpId"
-                        placeholder="{{ campo.label }}"/>
+                        placeholder="{{ campo.label | default:'' }}"
+                        value="{{ campo.value | default:'' }}"/>
                     </div>
                     <div class="col-12 help-text"> {{campo.errors}} </div>
-                {% endfor %}
-
-                    <button type="submit" class="btn btn-success">Crear cuenta</button>
+                    {% endfor %}
+                    <a name="" id="" class="btn btn-danger" href="{% url 'borrar' %}" role="button">Eliminar cuenta</a>
                 </form>
-                <p>Ya tienes una cuenta? <a href="login"class="gradient-text">Iniciar Sesion</a></p>
             </div>
         </div>
     </section>
-
-    
+    <h3>{{ usuarioid.nombre }}</h3>
 </body>
 </html>
