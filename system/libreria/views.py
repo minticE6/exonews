@@ -9,13 +9,17 @@ def Inicio(request):
 def Login (request):
     return render(request, 'paginas/login.html')
 
-def Edit(request, id):
-    return render(request, 'paginas/edit_borrar.html')
-
 def Edit_borrar(request):
     userid = userandpassword.objects.last()
     userid2 = Userandpasswordform(request.POST or None, request.FILES or None, instance = userid)
     return render(request, 'paginas/edit_borrar.html', {'userid2': userid2})
+
+def Edit(request):
+    useredit = userandpassword.objects.last()
+    useredit2 = Userandpasswordform(request.POST or None, request.FILES or None, instance = useredit)
+    if useredit2.is_valid() and request.POST:
+        useredit2.save()
+    return redirect('edit_borrar')
 
 def Borrar(request):
     userdelete = userandpassword.objects.last()
