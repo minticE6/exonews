@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'estilos.css' %}">
+    <link rel="icon" href="{% static 'imagen/iconopes1-removebg-preview.ico' %}">
+</head>
+<body>
+    <section class="form-main">
+        <div class="form-content">
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
+            <div class="circle-3"></div>
+            <div class="box">
+                <h3>Eliminar cuenta</h3>
+                
+                <form enctype="multipart/form-data" method="post">
+                    {% csrf_token %}
+                    {% for campo in userid2 %}
+                    
+                    <div class="input-box">
+                        <label for="" class="form-label">{{ campo.label }}: </label>
+                        <input
+                        type="{{ campo.field.widget.input_type | default:'' }}"
+                        class="input-control"
+                        name="{{ campo.name | default:'' }}"
+                        id=""
+                        aria-describedby="delpId"
+                        placeholder="{{ campo.label | default:'' }}"
+                        value="{{ campo.value | default:'' }}"/>
+                    </div>
+                    <div class="col-12 help-text"> {{campo.errors}} </div>
+                    {% endfor %}
+                    <a name="" id="" class="btn btn-danger" href="{% url 'borrar' %}" role="button">Eliminar cuenta</a> <br></br>
+                    <input name="" id="" class="btn btn-success" type="submit" value="Modificar informacion">
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

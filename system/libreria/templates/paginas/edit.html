@@ -16,12 +16,13 @@
             <div class="circle-2"></div>
             <div class="circle-3"></div>
             <div class="box">
-                <h3>Editar o Eliminar cuenta {{ userid2.id }}</h3>
+                <h3>Editar cuenta </h3>
                 
                 <form enctype="multipart/form-data" method="post">
                     {% csrf_token %}
-                    {% for campo in userid2 %}
-                    <div class="input-box">
+                    {% for campo in useredit2 %}
+                    
+                    <div class="mb-3">
                         <label for="" class="form-label">{{ campo.label }}: </label>
                         <input
                         type="{{ campo.field.widget.input_type | default:'' }}"
@@ -34,13 +35,10 @@
                     </div>
                     <div class="col-12 help-text"> {{campo.errors}} </div>
                     {% endfor %}
-                    <a name="" id="" class="btn btn-info" href="{% url 'edit' %}" role="button">Modificar cuenta</a><br></br>
-                    <a name="" id="" class="btn btn-danger" href="{% url 'borrar' %}" role="button">Eliminar cuenta</a>
-                    
+                    <input name="" id="" class="btn btn-success" type="submit" value="Modificar informacion">
                 </form>
             </div>
         </div>
     </section>
-    <h3>{{ usuarioid.nombre }}</h3>
 </body>
 </html>

@@ -12,14 +12,21 @@ def Login (request):
 def Edit_borrar(request):
     userid = userandpassword.objects.last()
     userid2 = Userandpasswordform(request.POST or None, request.FILES or None, instance = userid)
-    return render(request, 'paginas/edit_borrar.html', {'userid2': userid2})
+    return render(request, 'paginas/borrar.html', {'userid2': userid2})
 
 def Edit(request):
-    useredit = userandpassword.objects.last()
+    useredit3 = userandpassword.objects.last()
+    useredit = userandpassword.objects.get(id=useredit3.id)
     useredit2 = Userandpasswordform(request.POST or None, request.FILES or None, instance = useredit)
+    if request.method == 'GET':
+        print("cambiar el metodo a post")
+    if request.method == 'POST':
+        print("metodo en post")
     if useredit2.is_valid() and request.POST:
         useredit2.save()
-    return redirect('edit_borrar')
+        return redirect('edit')
+    return render(request, 'paginas/edit.html', {'useredit2': useredit2})
+
 
 def Borrar(request):
     userdelete = userandpassword.objects.last()
