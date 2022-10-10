@@ -1,13 +1,28 @@
 from django.shortcuts import render, redirect
 from .models import explanetas, userandpassword
-from .forms import Userandpasswordform
+from .forms import Userandpasswordform, Uservalidateform
+from .context_processors import mis_variables as varglobal
+
 
 def Inicio(request):
     Explanetas = explanetas.objects.all()
-    return render(request, 'paginas/inicio.html', {'Explanetas': Explanetas})
+    usuarios = userandpassword.objects.all()
+    return render(request, 'paginas/inicio.html', {'Explanetas': Explanetas, 'usuarios': usuarios})
 
 def Login (request):
-    return render(request, 'paginas/login.html')
+    form= Uservalidateform(request.POST)
+    if form.is_valid():
+        marcax = userandpassword.objects.get(apodo=form.cleaned_data['apodo'])
+        marca1 = marcax.id
+        print("form validado")
+        print("apodo:", form.cleaned_data['apodo'])
+        print("contrasena:", form.cleaned_data['contrasena'])
+        print(marca1)
+        return redirect('inicio')
+    else:
+        form = Uservalidateform()
+        print("no es valido")
+    return render(request, 'paginas/login.html', {'form' : form})
 
 def Edit_borrar(request):
     userid = userandpassword.objects.last()

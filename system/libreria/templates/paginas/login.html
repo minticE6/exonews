@@ -17,24 +17,32 @@
             <div class="circle-3"></div>
             <div class="box">
                 <h3>Bienvenido</h3>
-                <form action="">
-                    <div class="input-box">
-                        <input type="text" placeholder="Username" class="input-control">
-                    
-                    </div>
-                    <div class="input-box">
-                        <input type="password" placeholder="password" class="input-control">
-                         <div class="input-link">
-                            <a href="recuperarpass" class="gradient-text">Has olvidado tu contraseña</a>
-                         </div>
-                    </div>
-                    <button type="submit" class="btn">Iniciar Sesion</button>
-                </form>
+                <form enctype="multipart/form-data" method="POST">
+                {% csrf_token %}
+                {% for campo in form %}
+                <div class="input-box">
+                    <label for="" class="form-label">{{ campo.label }}: </label>
+                    <input
+                    type="{{ campo.field.widget.input_type | default:'' }}"
+                    class="input-control"
+                    name="{{ campo.name | default:'' }}"
+                    id=""
+                    aria-describedby="delpId"
+                    placeholder="{{ campo.label | default:'' }}"/>
+                </div>
+                <div class="col-12 help-text"> {{campo.errors}} </div>
+                {% endfor %}
+                <a href="edit" class="gradient-text">Has olvidado tu contraseña</a><br></br>
+                <input name="" id="" class="btn btn-success" type="submit" href="{% url 'login' %}" value="Iniciar seccion"/><br></br>
                 <p>No tienes una cuenta? <a href="inscribirse"class="gradient-text">Crear cuenta</a></p>
+                
             </div>
         </div>
-    </section>
+        
+    </form>
 
-    
+</div>
+</div>
+</section>
 </body>
 </html>
